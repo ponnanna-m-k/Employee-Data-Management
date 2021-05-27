@@ -1,0 +1,121 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Employee.master.cs" Inherits="Employee" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../StyleSheet.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .auto-style2 {
+            text-align: right;
+            color: black;
+            margin-bottom: 0px;
+        }
+        .auto-style3 {
+            width: 985px;
+            height: 494px;
+        }
+    </style>
+
+    <script type="text/javascript" language="javascript">
+        window.onload = function () {
+            noBack();
+        }
+        function noBack() {
+            window.history.forward();
+        }
+    </script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+     <div id="headd">
+         <br />
+         <br />
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/img/Employee.png" />
+    </div>
+    <div id="mainn" class="auto-style3"><div id="left">
+        <table class="tbl">
+            <tr>
+                <td class="tblhead">
+                    Welcome <%= Session["FName"]%></td>
+            </tr>
+                        <tr>
+                <td>
+                    <br />
+                            </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button7" runat="server" CssClass="mnu" Text="My Account" 
+                        CausesValidation="False" PostBackUrl="~/Emp/MyAccount.aspx" OnClick="Button7_Click" />
+                </td>
+            </tr>
+                        <tr>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button2" runat="server" CssClass="mnu" Text="View Calander" 
+                        CausesValidation="False" PostBackUrl="~/Emp/EmpCalendar.aspx" />
+                </td>
+            </tr>
+                        <tr>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button9" runat="server" CssClass="mnu" Text="Contact" 
+                        CausesValidation="False" PostBackUrl="~/Emp/Contacts.aspx" />
+                </td>
+            </tr>
+                        <tr>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button3" runat="server" CssClass="mnu" Text="About" 
+                        CausesValidation="False" PostBackUrl="~/Emp/about.aspx" />
+                </td>
+            </tr>
+                        <tr>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button8" runat="server" CssClass="mnu" Text="Change Password" 
+                        CausesValidation="False" PostBackUrl="~/Emp/ChangePass.aspx" />
+                </td>
+            </tr>
+                        <tr>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button6" runat="server" CssClass="mnu" 
+                        PostBackUrl="~/Default.aspx" Text="Log Out" CausesValidation="False" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <asp:Image ID="Image2" runat="server" />
+
+        </table>
+        </div><div id="right" class="auto-style2">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div></div>
+    <div id="foot"> </div>
+    </form>
+</body>
+</html>

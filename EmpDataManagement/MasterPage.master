@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    </head>
+<body>
+    <form id="form1" runat="server">
+    <div id="headd">
+        <br />
+        <br />
+&nbsp;<asp:Image ID="Image1" runat="server" ImageUrl="~/img/Employee.png" />
+    </div>
+    <div id="mainn"><div id="left">
+        <table class="tbl">
+            <tr>
+                <td class="tblhead">
+                    Admin Console</td>
+            </tr>
+                        <tr>
+                <td>
+                    <br />
+                    <br />
+                            </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <asp:Button ID="Button1" runat="server" CssClass="mnu" Text="Add Employee" 
+                        PostBackUrl="~/AddEmployee.aspx" CausesValidation="False" />
+                </td>
+            </tr>
+                        <tr>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button7" runat="server" CssClass="mnu" Text="Employee Report" 
+                        CausesValidation="False" PostBackUrl="~/EmpReport.aspx" />
+                </td>
+            </tr>
+                        <tr>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button2" runat="server" CssClass="mnu" Text="Employee List" 
+                        CausesValidation="False" PostBackUrl="~/EmployeeList.aspx" />
+                </td>
+            </tr>
+                        <tr>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button3" runat="server" CssClass="mnu" Text="Update Salary" 
+                        CausesValidation="False" PostBackUrl="~/UpdateSalary.aspx" />
+                </td>
+            </tr>
+                        <tr>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button10" runat="server" CssClass="mnu" Text="Add Admin" 
+                        CausesValidation="False" PostBackUrl="~/Addadmin.aspx" />
+                </td>
+            </tr>
+                        <tr>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button8" runat="server" CssClass="mnu" Text="Change Password" 
+                        CausesValidation="False" PostBackUrl="~/Changepass.aspx" />
+                </td>
+            </tr>
+                        <tr>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button6" runat="server" CssClass="mnu" 
+                        PostBackUrl="~/Default.aspx" Text="Log Out" CausesValidation="False" />
+                </td>
+            </tr>
+        </table>
+
+        </div><div id="right">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div></div>
+                    <tr>
+                <td>
+                    &nbsp;&nbsp;</td>
+            </tr>
+    <div id="foot"> </div>
+    </form>
+</body>
+</html>
